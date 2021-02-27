@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SWProject.Views.SWProjectPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="Gray"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Stopwatch App"
+                HorizontalOptions="Center"
+                   FontSize="40"
+                   FontAttributes="Bold, Italic"/>
+            <Frame BackgroundColor="#D2D2D2"
+                   HorizontalOptions="Center"
+                   VerticalOptions="StartAndExpand"
+                   Margin="30, 0">
+                <StackLayout>
+                    <Label Text="00:00:00.00"
+                       FontSize="50"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       x:Name="swLabel"/>
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="StartAndExpand">
+                        <Button Text="Start"
+                                x:Name="startBtn"
+                                Clicked="startBtn_Clicked"/>
+                        <Button Text="Stop"
+                                x:Name="stopBtn"
+                                Clicked="stopBtn_Clicked"/>
+                        <Button Text="Reset"
+                                x:Name="resetBtn"
+                                Clicked="resetBtn_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
